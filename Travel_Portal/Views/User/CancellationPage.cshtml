@@ -1,0 +1,29 @@
+﻿@model Entity_Model_Layer.Models.Booking
+
+@{
+    ViewData["Title"] = "TicketCancellation";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style>
+    h3 {
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+        text-align: center
+    }
+</style>
+
+<h3>@ViewBag.Message</h3>
+
+
+@if (ViewBag.Message == "Your Ticket Is Cancelled Successfully!")
+{
+    <h3>
+        ₹@ViewBag.RefundFare is Refunded to Your Account!
+    </h3>
+}

@@ -1,0 +1,96 @@
+﻿@model Entity_Model_Layer.Models.TourPackage
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>TourPackage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TourName" class="control-label"></label>
+                <input asp-for="TourName" onblur="CheckTourNameExists();" class="form-control" required />
+                <span asp-validation-for="TourName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Source" class="control-label"></label>
+                <input asp-for="Source" class="form-control" required/>
+                <span asp-validation-for="Source" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination" class="control-label"></label>
+                <input asp-for="Destination" class="form-control" required/>
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Places" class="control-label"></label>
+                <input asp-for="Places" class="form-control" required/>
+                <span asp-validation-for="Places" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" required/>
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fare" class="control-label"></label>
+                <input asp-for="Fare" class="form-control" required/>
+                <span asp-validation-for="Fare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" required/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FoodAmount" class="control-label"></label>
+                <input asp-for="FoodAmount" class="form-control" required />
+                <span asp-validation-for="FoodAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StayAmount" class="control-label"></label>
+                <input asp-for="StayAmount" class="form-control" required/>
+                <span asp-validation-for="StayAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Package" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script type="text/javascript">
+    function CheckTourNameExists()
+    {
+        var url = '@Url.Content("~/")' + "Admin/CheckTourName";
+     var source = "#TourName";
+        $.post(url, { Username: $(source).val() }, function (data)
+        {
+        if (data)
+        {
+        $(source).val('');
+        alert("TourName Already Used try unique one!");
+        }
+        else
+        {
+
+        }
+        });
+        }
+</script>
+

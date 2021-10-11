@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Entity_Model_Layer.Models.Bu>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DemoLayout.cshtml";
+}
+
+
+<p>
+    <a asp-controller="Admin" asp-action="createbus">Add new Bus</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BusName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalSeats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fare)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tour)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BusName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ac)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalSeats)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fare)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tour.Description)
+                </td>
+                <td>
+                    <a asp-action="updatebus" asp-route-id="@item.BusId">Edit</a> 
+                    <a asp-action="busdetails" asp-route-id="@item.BusId">Details</a> 
+                    <a asp-action="deletebus" asp-route-id="@item.BusId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

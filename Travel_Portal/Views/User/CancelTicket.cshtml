@@ -1,0 +1,23 @@
+﻿
+@model Entity_Model_Layer.Models.Booking
+
+@{
+    ViewData["Title"] = "Cancel Ticket";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<h4>Cancel Ticket</h4>
+<form asp-action="CheckCancellation" method="post">
+    <div class="form-group">
+        <label asp-for="BookingId" class="control-label"></label>
+        <input asp-for="BookingId" class="form-control" required />
+        <span asp-validation-for="BookingId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CustomerEmail" class="control-label"></label>
+        <input asp-for="CustomerEmail" class="form-control" required/>
+        <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Cancel" class="btn btn-primary" />
+    </div>
+</form>

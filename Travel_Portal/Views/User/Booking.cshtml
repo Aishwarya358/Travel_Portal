@@ -1,0 +1,86 @@
+﻿@model Entity_Model_Layer.Models.Booking
+
+@{
+    ViewData["Title"] = "Booking";
+}
+
+<script>
+  function showAlert() {
+      alert("Your Booking Is Successful!");
+ }
+</script>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Booking">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TourId" class="control-label"></label>
+                <input asp-for="TourId" value="@ViewBag.Id" class="form-control" readonly />
+                <span asp-validation-for="TourId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerName" class="control-label"></label>
+                <input asp-for="CustomerName" class="form-control" required/>
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerEmail" class="control-label"></label>
+                <input asp-for="CustomerEmail" class="form-control" required/>
+                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Source" class="control-label"></label>
+                <input asp-for="Source" class="form-control"/>
+                <span asp-validation-for="Source" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination" class="control-label"></label>
+                <input asp-for="Destination" class="form-control"  />
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="DepartureDate" class="control-label"></label>
+                <input asp-for="DepartureDate" class="form-control" required/>
+                <span asp-validation-for="DepartureDate" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="ReturnDate" class="control-label"></label>
+                <input asp-for="ReturnDate" class="form-control" />
+                <span asp-validation-for="ReturnDate" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="TotalPassengers" class="control-label"></label>
+                <input asp-for="TotalPassengers" class="form-control" required/>
+                <span asp-validation-for="TotalPassengers" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeatsLeft" class="control-label"></label>
+                <input asp-for="SeatsLeft" class="form-control" />
+                <span asp-validation-for="SeatsLeft" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Book" onclick="showAlert()" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="viewtour">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,32 @@
+﻿@model Entity_Model_Layer.Models.Booking
+
+@{
+    ViewData["Title"] = "TicketCancellation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    h3 {
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+        text-align: center
+    }
+</style>
+
+<h3>
+    @*@Html.DisplayFor(model => model.Fare)*@
+    Your Booking Id is @ViewBag.BookingId !<br />
+    Your Total Fare is ₹@ViewBag.TotalFare<br />
+    Source : @ViewBag.Source<br />
+    Destination : @ViewBag.Destination<br />
+</h3>
+<div>
+    <a asp-action="Makepayment">Make Payment</a>
+</div>
+
+

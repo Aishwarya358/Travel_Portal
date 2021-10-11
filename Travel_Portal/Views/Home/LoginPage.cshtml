@@ -1,0 +1,254 @@
+﻿@model Entity_Model_Layer.Models.Admin
+<!--<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="center">
+        <h1>Admin Login</h1>
+        <form asp-action="LoginPage">
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" type="email" class="form-control" required />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="form-control" required />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<style>-->
+@*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');*@
+<!--*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg,#2980b9, #8e44ad);
+  height: 100vh;
+  overflow: hidden;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+input[type="submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover{
+  border-color: #2691d9;
+  transition: .5s;
+}
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a{
+  color: #2691d9;
+  text-decoration: none;
+}
+.signup_link a:hover{
+  text-decoration: underline;
+}
+</style>-->
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Home</title>
+    <link rel="stylesheet" href="~/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.26.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+    <script type="application/ld+json">
+        {
+
+                "name": "",
+                "logo": "images/default-logo.png"
+        }</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body">
+    <h4>Admin Login</h4>
+    <section class="u-align-center u-clearfix u-white u-section-1" src="" id="carousel_595e">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+                <div class="u-gutter-0 u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-container-style u-image u-layout-cell u-size-23 u-image-1" data-image-width="1280" data-image-height="848">
+                            <div class="u-container-layout u-container-layout-1"></div>
+                        </div>
+                        <div class="u-align-center u-container-style u-grey-10 u-layout-cell u-radius-50 u-shape-round u-size-37 u-layout-cell-2">
+                            <div class="u-container-layout u-valign-top u-container-layout-2">
+                                <div class="u-form u-form-1">
+                                    @*<form asp-action="customer" method="POST" class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" style="padding: 0px;" source="custom" name="form">
+                                            <div class="u-form-email u-form-group u-form-group-1">
+                                                <label asp-for="EmailId" class="u-form-control-hidden u-label" wfd-invisible="true"></label>
+                                                <input asp-for="EmailId" type="email" class="u-border-2 u-border-white u-input u-input-rectangle u-radius-50 u-white u-input-2" required="" placeholder="email">
+                                            </div>
+                                            <div class="u-form-group u-form-name u-form-group-2">
+                                                <label asp-for="Password" class="u-form-control-hidden u-label" wfd-invisible="true"></label>
+                                                <input asp-for="Password" type=Password placeholder="Password"  class="u-border-2 u-border-white u-input u-input-rectangle u-radius-50 u-white u-input-1" required="">
+                                            </div>
+                                            <div class="u-align-left u-form-group u-form-submit u-form-group-3">
+                                                <a href="#" class="u-active-white u-black u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-white u-radius-50 u-text-active-black u-text-hover-black u-btn-1">
+                                                    login<br>
+                                                </a>
+                                                <input type="submit" value="submit" class="u-form-control-hidden" wfd-invisible="true">
+                                            </div>
+                                            <div class="u-form-send-message u-form-send-success" wfd-invisible="true"> Thank you! Your message has been sent. </div>
+                                            <div class="u-form-send-error u-form-send-message" wfd-invisible="true"> Unable to send your message. Please fix errors then try again. </div>
+                                            <input type="hidden" value="" name="recaptchaResponse" wfd-invisible="true">
+                                        </form>*@
+                                    <form asp-action="LoginPage">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                        <div class="form-group">
+                                            <label asp-for="Email" class="control-label"></label>
+                                            <input asp-for="Email" class="form-control" type="email" required />
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Password" class="control-label"></label>
+                                            <input asp-for="Password" class="form-control" type="password" required />
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+                                        @*<div class="pass">Forgot Password?</div>
+                                            <div class="form-group">
+                                                <input type="submit" value="Login" class="btn btn-primary" />
+
+                                            </div>*@
+                                        @*<div class="signup_link">
+                                                Not a Member?<a href="Home/Register">SignUp</a>
+                                            </div>*@
+                                        <div class="u-align-left u-form-group u-form-submit u-form-group-3">
+                                            <a href="http://localhost:17045/User/dash" class="u-active-white u-black u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-white u-radius-50 u-text-active-black u-text-hover-black u-btn-1">
+                                                login<br>
+                                            </a>
+                                            <input type="submit" value="Login" class="u-form-control-hidden" wfd-invisible="true">
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @*<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4558">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            </div>
+        </footer>*@
+
+
+
+
+</body>
+</html>
